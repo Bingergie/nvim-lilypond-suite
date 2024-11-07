@@ -13,7 +13,7 @@ local function commands()
         lilypond = {
             efm = "%f:%l:%c:%m,%f:%l:%m%[^;],%f:%l:%m,%-G%.%#",
             make = string.format('lilypond %s %s -f %s -o %s %s', C.backend, C.include, C.output_fm,
-                Utils.shellescape(Utils.joinpath(C.folder, name), true), C.main)
+                Utils.joinpath(C.folder, name), C.main)
         },
         lualatex = {
             efm = "%f:%l:%m,%-G%.%#",
